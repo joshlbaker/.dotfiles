@@ -31,9 +31,3 @@ setopt autocd
 
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="code ~/.zshrc"
-
-# ---- git ----
-
-alias gs="git status"
-alias gcp="git cherry-pick"
-alias gcm="git commit -m"
