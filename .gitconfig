@@ -1,3 +1,18 @@
 [user]
 	name = Josh Baker
 	email = 12449263+joshlbaker@users.noreply.github.com
+[alias]
+		# Display all aliases :)
+	aliases = ! git config --list | awk '/alias/{ print $1 }' | perl -pe 's/alias\\.//g' | perl -pe 's/=.+//g'
+	co = checkout
+	fa = fetch --all --prune
+	please-push = push --force-with-lease
+	st = status
+	cp = cherry-pick
+		# Get the "name" of the repo directory. This is the namespace (usually the
+	# org name) & repo name from the first remote URL listed by git remote -v.
+	# This will probably break if there is no remote (easy to fix), or if the
+	# remote URL doesn't match the typical $host/$org/$repo.git pattern.
+	repo-name = ! "[ -n \"$(git remote)\" ] && git remote -v | head -1 | cut -d ' ' -f 1 | grep -E --only-matching '([^:/ ]+/[^/ ]+)(\\.git)?$' | sed 's/\\.git$//' || basename $(pwd)"
+	branch-name = ! "git rev-parse HEAD >/dev/null 2>&1 && git rev-parse --abbrev-ref HEAD || echo '???no-branch???'"
+	repo-and-branch-name = ! "echo $(git repo-name)':'$(git branch-name)"

@@ -27,6 +27,8 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator 
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+setopt autocd
+
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="code ~/.zshrc"
 
@@ -35,4 +37,3 @@ alias edit-zsh="code ~/.zshrc"
 alias gs="git status"
 alias gcp="git cherry-pick"
 alias gcm="git commit -m"
-setopt autocd
