@@ -1,5 +1,8 @@
 tap "homebrew/bundle"
 # Bourne-Again SHell, a UNIX command interpreter
+tap "homebrew/cask"
+tap "homebrew/core"
+brew 'bat'
 brew "bash"
 # Modern, maintained replacement for ls
 brew "git"
@@ -18,6 +21,10 @@ brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # GPU-accelerated terminal emulator
+
+cask "alfred"
+cask "google-chrome"
+cask "visual-studio-code"
 cask "expo-orbit"
 cask "font-meslo-lg-nerd-font"
 
