@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
 # Bourne-Again SHell, a UNIX command interpreter
-tap "homebrew/cask"
-tap "homebrew/core"
 brew 'bat'
 brew "bash"
 # Modern, maintained replacement for ls
