@@ -20,6 +20,9 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # GPU-accelerated terminal emulator
 
+# Java
+brew "openjdk"
+
 cask "alfred"
 cask "google-chrome"
 cask "visual-studio-code"
