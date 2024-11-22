@@ -21,7 +21,7 @@ brew "zsh-syntax-highlighting"
 # GPU-accelerated terminal emulator
 
 # Java
-brew "openjdk"
+brew "openjdk@17"
 
 cask "alfred"
 cask "google-chrome"
