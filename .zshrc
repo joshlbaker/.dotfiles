@@ -39,7 +39,14 @@ setopt autocd
 
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="code ~/.zshrc"
+alias pod-install="cd ios && pod deintegrate && pod install && cd .."
+alias ios-clean="cd ios && xcodebuild clean && .."
+alias android-clean="cd android && ./gradlew clean && ./gradlew build && cd .."
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"

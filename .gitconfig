@@ -1,6 +1,6 @@
 [user]
 	name = Josh Baker
-	email = 12449263+joshlbaker@users.noreply.github.com
+	email = hellojoshbaker@gmail.com
 [alias]
 		# Display all aliases :)
 	aliases = ! git config --list | awk '/alias/{ print $1 }' | perl -pe 's/alias\\.//g' | perl -pe 's/=.+//g'
@@ -16,3 +16,8 @@
 	repo-name = ! "[ -n \"$(git remote)\" ] && git remote -v | head -1 | cut -d ' ' -f 1 | grep -E --only-matching '([^:/ ]+/[^/ ]+)(\\.git)?$' | sed 's/\\.git$//' || basename $(pwd)"
 	branch-name = ! "git rev-parse HEAD >/dev/null 2>&1 && git rev-parse --abbrev-ref HEAD || echo '???no-branch???'"
 	repo-and-branch-name = ! "echo $(git repo-name)':'$(git branch-name)"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
