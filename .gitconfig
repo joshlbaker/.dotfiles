@@ -1,6 +1,6 @@
 [user]
 	name = Josh Baker
-	email = hellojoshbaker@gmail.com
+	email = 12449263+joshlbaker@users.noreply.github.com
 [alias]
 		# Display all aliases :)
 	aliases = ! git config --list | awk '/alias/{ print $1 }' | perl -pe 's/alias\\.//g' | perl -pe 's/=.+//g'
